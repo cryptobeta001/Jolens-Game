@@ -24,7 +24,7 @@ Jollen, also known as Holen, is a beloved traditional game in the Philippines th
 
 1. **Visit the GitHub Pages URL:**
     - Open a web browser (e.g., Chrome, Firefox, Safari).
-    - Go to [Jollen's Game](https://cryptobeta001.github.io/jolens-game/).
+    - Go to [Jollen's Game](https://cryptobeta001.github.io/Jolens-Game/).
 
 2. **Play the Game:**
     - The game will load in the browser.
