@@ -1,33 +1,82 @@
-# Jollen's Game
+# Marble match game
 
-Jollen, also known as Holen, is a beloved traditional game in the Philippines that has been enjoyed by generations of children. This is a modern adaptation of the game with score tracking, leaderboard, reset functionality, and simple sounds.
+🎮 Marble Match Game
+A colorful 2-player marble matching puzzle game built using HTML5, CSS, and JavaScript. Match 3 or more marbles of the same color, earn points, and climb to level 100 before your opponent!
 
-## How to Play
+🚀 Demo
+💡 Live Demo Link Go to [Marble-Match-Game](https://cryptobeta001.github.io/Marble-Match-Game/)
+(Replace with your GitHub Pages or Netlify deployment link)
 
-1. **Objective:** The goal of Jollen is to hit your opponent's marble out of a designated circle or to hit them with a well-aimed shot. The first player to successfully hit the opponent's marble wins the round.
-2. **Equipment:** Marbles (traditionally made from clay, stone, or polished nuts)
-3. **Rules:**
-    - Setup: Draw a small circle on the ground to serve as the target area. Each player places their marble inside this circle.
-    - Taking Turns: Players take turns trying to hit their opponent's marble out of the circle.
-    - Shooting: The shooter holds their larger marble in the crook of their index finger and flicks it with their thumb, aiming to hit the opponent's marble.
-    - Scoring: If the shooter successfully knocks the opponent's marble out of the circle, they win that round. If not, the opponent gets a chance to shoot back.
-    - Winning the Game: The game can be played in rounds, and the player who wins the most rounds is declared the overall winner.
+📸 Screenshots
+![image](https://github.com/user-attachments/assets/6f5920e4-29ac-48df-8d43-059c68308f24)
 
-## Features
+🧩 How to Play
+🔍 Click on a marble to find matching adjacent marbles (horizontally or vertically).
 
-- **Score Tracking:** Tracks scores for both players.
-- **Leaderboard:** Displays current scores for each player.
-- **Reset Functionality:** Resets the game state and clears the result message.
-- **Simple Sounds:** Plays sounds when a player hits the button or wins a round.
+🎯 A group of 3 or more same-colored marbles will disappear and be replaced.
 
-## How to Run the Game
+🧠 Turns alternate between Player 1 and Player 2.
 
-1. **Visit the GitHub Pages URL:**
-    - Open a web browser (e.g., Chrome, Firefox, Safari).
-    - Go to [Jollen's Game](https://cryptobeta001.github.io/Jolens-Game/).
+🏆 Score a point for each valid match.
 
-2. **Play the Game:**
-    - The game will load in the browser.
-    - Players can click the "Player 1 Hit Me!" or "Player 2 Hit Me!" buttons to play.
-    - Scores will be tracked, and the result will be displayed.
-    - Click the "Reset Game" button to reset the scores and start a new game.
+🧱 Game progresses through 100 levels. When level 100 is reached, the player with the higher score wins!
+
+🎮 Controls
+🖱️ Click on the canvas to select marbles.
+
+🔁 Click the "Reset Game" button to restart at any time.
+
+🔊 Sounds
+✅ match.mp3 – Played on successful match
+
+🏁 win.mp3 – Played when the game ends
+
+🧱 Tech Stack
+HTML5 Canvas – for rendering the game board
+
+Vanilla JavaScript – game logic and interactivity
+
+CSS3 – UI styling and layout
+
+---
+
+📁 Project Structure
+python
+Copy
+Edit
+marble-match-game/
+│
+├── index.html          # HTML layout
+├── style.css           # Game styles
+├── script.js           # Game logic
+├── sounds/
+│   ├── match.mp3       # Match sound
+│   └── win.mp3         # Win sound
+└── README.md           # Project description
+
+---
+
+⚙️ How to Run Locally
+
+## Clone this repository:
+
+git clone https://github.com/your-username/marble-match-game.git
+cd marble-match-game
+
+## Open index.html in your browser:
+
+open index.html     # Mac
+# or
+start index.html    # Windows
+
+
+✨ Features
+🎨 Interactive 10x10 color marble grid
+🧠 Turn-based 2-player gameplay
+🔄 Dynamic marble fall/replacement after matches
+🔊 Audio feedback for match and win
+✅ Fully responsive and styled UI
+
+
+📜 License
+This project is open-source and available under the MIT License.
