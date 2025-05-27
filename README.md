@@ -1,6 +1,4 @@
-## Marble match game v1.1
-
-## 🎮 Marble Match Game
+## 🎮 Marble Match Game v1.1
 
 * A colorful 2-player marble matching puzzle game built using HTML5, CSS, and JavaScript. Match 3 or more marbles of the same color, earn points, and climb to level 100 before your opponent!
 
