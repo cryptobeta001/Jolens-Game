@@ -25,6 +25,11 @@ body {
     margin: 0 20px;
 }
 
+.level {
+    display: inline-block;
+    margin: 0 20px;
+}
+
 button {
     padding: 10px 20px;
     font-size: 16px;
