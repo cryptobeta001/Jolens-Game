@@ -3,29 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jollen's Marble Matching Game</title>
+    <title>Marble Color Match Game</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="game-container">
-        <h1>Jollen's Marble Matching Game!</h1>
-        <div class="scoreboard">
-            <div class="player-score" id="player1-score">
-                <h2>Player 1: <span id="player1-score-value">0</span></h2>
-            </div>
-            <div class="player-score" id="player2-score">
-                <h2>Player 2: <span id="player2-score-value">0</span></h2>
-            </div>
-            <div class="level">
-                <h2>Level: <span id="level-value">1</span></h2>
-            </div>
-        </div>
-        <canvas id="game-canvas"></canvas>
+
+    <h1>🎯 Marble Color Match Game</h1>
+
+    <canvas id="game-canvas" width="400" height="400"></canvas>
+
+    <div id="score-panel">
+        <p>Player 1 Score: <span id="player1-score-value">0</span></p>
+        <p>Player 2 Score: <span id="player2-score-value">0</span></p>
+        <p>Level: <span id="level-value">1</span></p>
         <p id="result"></p>
-        <button id="reset-button">Reset Game</button>
     </div>
-    <audio id="match-sound" src="match.mp3"></audio>
-    <audio id="win-sound" src="win.mp3"></audio>
+
+    <button id="reset-button">Reset Game</button>
+
+    <!-- Sounds -->
+    <audio id="match-sound" src="sounds/match.mp3" preload="auto"></audio>
+    <audio id="win-sound" src="sounds/win.mp3" preload="auto"></audio>
+
     <script src="script.js"></script>
 </body>
 </html>
