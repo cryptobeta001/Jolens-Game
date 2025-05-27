@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marble Match Game</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marble Match Game</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div id="game-container">
-        <div id="scoreboard">
-            <div>Player 1: <span id="player1-score-value">0</span></div>
-            <div>Player 2: <span id="player2-score-value">0</span></div>
-            <div>Level: <span id="level-value">1</span></div>
-        </div>
-        <canvas id="game-canvas" width="400" height="400"></canvas>
-        <div id="result"></div>
-        <button id="reset-button">Reset Game</button>
-    </div>
-    <audio id="match-sound" src="sounds/match.mp3" preload="auto"></audio>
-    <audio id="win-sound" src="sounds/win.mp3" preload="auto"></audio>
-    <script src="script.js"></script>
+  <h1>Marble Match Game</h1>
+
+  <div id="game-info">
+    <div>Player 1 Score: <span id="player1-score-value">0</span></div>
+    <div>Player 2 Score: <span id="player2-score-value">0</span></div>
+    <div>Level: <span id="level-value">1</span></div>
+  </div>
+
+  <!-- Canvas with explicit width and height -->
+  <canvas id="game-canvas" width="400" height="400"></canvas>
+
+  <button id="reset-button">Reset Game</button>
+
+  <div id="result"></div>
+
+  <!-- Audio -->
+  <audio id="match-sound" src="sounds/match.mp3" preload="auto"></audio>
+  <audio id="win-sound" src="sounds/win.mp3" preload="auto"></audio>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
