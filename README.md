@@ -1,4 +1,4 @@
-# Marble match game
+# Marble match game v1.1
 
 🎮 Marble Match Game
 A colorful 2-player marble matching puzzle game built using HTML5, CSS, and JavaScript. Match 3 or more marbles of the same color, earn points, and climb to level 100 before your opponent!
@@ -8,7 +8,8 @@ Play the game here: [https://cryptobeta001.github.io/Marble-Match-Game/](https:/
 
 
 📸 Screenshots
-![image](https://github.com/user-attachments/assets/6f5920e4-29ac-48df-8d43-059c68308f24)
+![image](https://github.com/user-attachments/assets/83ff7159-0828-4961-a47e-71a48e008cf1)
+
 
 🧩 How to Play
 🔍 Click on a marble to find matching adjacent marbles (horizontally or vertically).
@@ -28,7 +29,6 @@ Play the game here: [https://cryptobeta001.github.io/Marble-Match-Game/](https:/
 HTML5 Canvas – for rendering the game board
 Vanilla JavaScript – game logic and interactivity
 CSS3 – UI styling and layout
-
 
 
 ✨ Features
