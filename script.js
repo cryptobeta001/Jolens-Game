@@ -24,6 +24,7 @@ class Marble {
     }
 
     draw() {
+        if (this.color === '') return;
         ctx.fillStyle = this.color;
         ctx.beginPath();
         ctx.arc(this.x * marbleSize + marbleSize / 2, this.y * marbleSize + marbleSize / 2, marbleSize / 2 - 2, 0, Math.PI * 2);
@@ -32,6 +33,7 @@ class Marble {
 }
 
 function initializeMarbles() {
+    marbles.length = 0;
     for (let y = 0; y < gridHeight; y++) {
         for (let x = 0; x < gridWidth; x++) {
             const color = colors[Math.floor(Math.random() * colors.length)];
@@ -41,6 +43,7 @@ function initializeMarbles() {
 }
 
 function drawGrid() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.strokeStyle = '#000';
     for (let x = 0; x <= gridWidth; x++) {
         ctx.beginPath();
@@ -66,9 +69,13 @@ function updateScores() {
     document.getElementById('level-value').innerText = level;
 }
 
+function getMarble(x, y) {
+    return marbles.find(m => m.x === x && m.y === y);
+}
+
 function checkMatch(x, y) {
     if (x < 0 || x >= gridWidth || y < 0 || y >= gridHeight) return false;
-    const marble = marbles.find(m => m.x === x && m.y === y);
+    const marble = getMarble(x, y);
     if (!marble || marble.color === '') return false;
 
     const targetColor = marble.color;
@@ -76,12 +83,12 @@ function checkMatch(x, y) {
     const visited = new Set();
 
     function dfs(cx, cy) {
-        if (cx < 0 || cx >= gridWidth || cy < 0 || cy >= gridHeight) return;
-        if (visited.has(`${cx},${cy}`)) return;
-        const m = marbles.find(m => m.x === cx && m.y === cy);
+        const key = `${cx},${cy}`;
+        if (cx < 0 || cx >= gridWidth || cy < 0 || cy >= gridHeight || visited.has(key)) return;
+        const m = getMarble(cx, cy);
         if (!m || m.color !== targetColor) return;
 
-        visited.add(`${cx},${cy}`);
+        visited.add(key);
         matched.push(m);
 
         dfs(cx + 1, cy);
@@ -103,21 +110,23 @@ function checkMatch(x, y) {
 
 function clearEmptySpaces() {
     for (let x = 0; x < gridWidth; x++) {
-        let emptyCount = 0;
+        let column = [];
+        // Collect non-empty marbles from bottom to top
         for (let y = gridHeight - 1; y >= 0; y--) {
-            if (marbles[y * gridWidth + x].color === '') {
-                emptyCount++;
-            } else if (emptyCount > 0) {
-                marbles[(y + emptyCount) * gridWidth + x].color = marbles[y * gridWidth + x].color;
-                marbles[y * gridWidth + x].color = '';
+            const m = getMarble(x, y);
+            if (m && m.color !== '') {
+                column.push(m.color);
             }
         }
-    }
-
-    for (let x = 0; x < gridWidth; x++) {
-        for (let y = 0; y < emptyCount; y++) {
-            const color = colors[Math.floor(Math.random() * colors.length)];
-            marbles[y * gridWidth + x] = new Marble(x, y, color);
+        // Fill column with colors or new ones
+        for (let y = gridHeight - 1; y >= 0; y--) {
+            const idx = y * gridWidth + x;
+            if (column.length > 0) {
+                marbles[idx].color = column.shift();
+            } else {
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                marbles[idx].color = color;
+            }
         }
     }
 }
@@ -136,10 +145,9 @@ function updateGame() {
     drawGrid();
     drawMarbles();
     updateScores();
-
-    if (gameOver) return;
-
-    requestAnimationFrame(updateGame);
+    if (!gameOver) {
+        requestAnimationFrame(updateGame);
+    }
 }
 
 function handleClick(event) {
@@ -175,15 +183,15 @@ function resetGame() {
     player2Score = 0;
     level = 1;
     currentPlayer = 1;
-    marbles.length = 0;
     document.getElementById('result').innerText = '';
-    playMatchSound();
     initializeMarbles();
+    playMatchSound(); // optional for feedback
     updateGame();
 }
 
 canvas.addEventListener('click', handleClick);
 document.getElementById('reset-button').addEventListener('click', resetGame);
 
+// Init
 initializeMarbles();
 updateGame();
