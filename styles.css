@@ -41,6 +41,13 @@ button:hover {
     background-color: #0056b3;
 }
 
+#game-canvas {
+    width: 800px;
+    height: 600px;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
 #result {
     font-size: 18px;
     margin-top: 20px;
