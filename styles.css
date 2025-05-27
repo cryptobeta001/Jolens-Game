@@ -1,63 +1,41 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styling */
+/* Reset some defaults */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  text-align: center;
+  margin: 20px;
+  color: #333;
 }
 
-/* Game Container */
-#game-container {
-    text-align: center;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+h1 {
+  margin-bottom: 10px;
 }
 
-/* Scoreboard Styling */
-#scoreboard {
-    margin-bottom: 20px;
-    font-size: 18px;
-    font-weight: bold;
+#game-info {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
-/* Canvas Styling */
-#game-canvas {
-    border: 2px solid #000;
-    margin-bottom: 20px;
-    background-color: #e0e0e0;
+canvas {
+  border: 2px solid #000;
+  display: block;
+  margin: 0 auto 15px auto;
+  image-rendering: pixelated; /* Keeps marble circles crisp */
+  /* Match width and height to canvas element size */
+  width: 400px;
+  height: 400px;
 }
 
-/* Result Message */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 #result {
-    font-size: 24px;
-    font-weight: bold;
-    color: green;
-    margin-bottom: 20px;
-}
-
-/* Reset Button */
-#reset-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#reset-button:hover {
-    background-color: #45a049;
+  margin-top: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: green;
 }
