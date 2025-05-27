@@ -12,62 +12,23 @@ A colorful 2-player marble matching puzzle game built using HTML5, CSS, and Java
 
 🧩 How to Play
 🔍 Click on a marble to find matching adjacent marbles (horizontally or vertically).
-
 🎯 A group of 3 or more same-colored marbles will disappear and be replaced.
-
 🧠 Turns alternate between Player 1 and Player 2.
-
 🏆 Score a point for each valid match.
-
 🧱 Game progresses through 100 levels. When level 100 is reached, the player with the higher score wins!
 
 🎮 Controls
 🖱️ Click on the canvas to select marbles.
-
 🔁 Click the "Reset Game" button to restart at any time.
-
 🔊 Sounds
 ✅ match.mp3 – Played on successful match
-
 🏁 win.mp3 – Played when the game ends
-
 🧱 Tech Stack
+
 HTML5 Canvas – for rendering the game board
-
 Vanilla JavaScript – game logic and interactivity
-
 CSS3 – UI styling and layout
 
----
-
-📁 Project Structure
-python
-Copy
-Edit
-marble-match-game/
-│
-├── index.html          # HTML layout
-├── style.css           # Game styles
-├── script.js           # Game logic
-├── sounds/
-│   ├── match.mp3       # Match sound
-│   └── win.mp3         # Win sound
-└── README.md           # Project description
-
----
-
-⚙️ How to Run Locally
-
-## Clone this repository:
-
-git clone https://github.com/your-username/marble-match-game.git
-cd marble-match-game
-
-## Open index.html in your browser:
-
-open index.html     # Mac
-# or
-start index.html    # Windows
 
 
 ✨ Features
